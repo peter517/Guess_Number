@@ -28,14 +28,14 @@ CSetDlg::CSetDlg(CWnd* pParent /*=NULL*/)
 
 BOOL CSetDlg::OnInitDialog()
 {
-  CDialog::OnInitDialog();
+	CDialog::OnInitDialog();
 
- m_SetMax.SetRange(1,1000);
- m_SetMax.SetPos(100);
- m_SetMin.SetRange(1,1000);
- m_SetMin.SetPos(1);
+	m_SetMax.SetRange(1,1000);
+	m_SetMax.SetPos(100);
+	m_SetMin.SetRange(1,1000);
+	m_SetMin.SetPos(1);
 
-  return TRUE; 
+	return TRUE; 
 }
 
 void CSetDlg::DoDataExchange(CDataExchange* pDX)
@@ -53,32 +53,32 @@ void CSetDlg::DoDataExchange(CDataExchange* pDX)
 
 BEGIN_MESSAGE_MAP(CSetDlg, CDialog)
 	//{{AFX_MSG_MAP(CSetDlg)
-	ON_BN_CLICKED(IDC_BUTTON1, OnButton1)
+	ON_BN_CLICKED(IDC_BUTTON1, OnBtnSetOk)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 
 /////////////////////////////////////////////////////////////////////////////
 // CSetDlg message handlers
 
-void CSetDlg::OnButton1() 
+void CSetDlg::OnBtnSetOk() 
 {
-    UpdateData(TRUE);  // 获取用户输入
-	
+	UpdateData(TRUE);  // 获取用户输入
+
 	if (m_IconStyle == 0)  
 		; 
 	else if (m_IconStyle == 1)
 		;
 	else 
 		;
-    if(m_Set_To_Start_Max>m_Set_To_Start_Min)
+	if(m_Set_To_Start_Max>m_Set_To_Start_Min)
 	{
-    Set_To_Start_Max=m_Set_To_Start_Max;
-	Set_To_Start_Min=m_Set_To_Start_Min;
-    
-	CDialog::OnOK(); /*关闭对话框*/
+		Set_To_Start_Max=m_Set_To_Start_Max;
+		Set_To_Start_Min=m_Set_To_Start_Min;
+
+		CDialog::OnOK(); /*关闭对话框*/
 	}
 	else
 	{
-    MessageBox(_T("您输入的要猜的数字的下限比上限要大，请重新输入!"),_T("提示"),MB_ICONWARNING|MB_OK);
+		MessageBox(_T("您输入的要猜的数字的下限比上限要大，请重新输入!"),_T("提示"),MB_ICONWARNING|MB_OK);
 	}
 }

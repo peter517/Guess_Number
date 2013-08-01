@@ -224,7 +224,7 @@ HCURSOR CGuess_NumberDlg::OnQueryDragIcon()
 
 void CGuess_NumberDlg::OnButton1()   /*DoModal()表示窗口一直停在最前端*/
 {
-	m_start = new CStart;
+	m_start = new CStartDlg;
 	m_start->DoModal();	
 }
 

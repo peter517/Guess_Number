@@ -11,11 +11,11 @@
 // CMyEdit window
 #include "Guess_Number.h"
 
-class CMyEdit : public CEdit
+class CTextFormatCtrl : public CEdit
 {
 // Construction
 public:
-	CMyEdit();
+	CTextFormatCtrl();
 
 // Attributes
 public:
@@ -30,7 +30,7 @@ public:
 
 // Implementation
 public:
-	virtual ~CMyEdit();
+	virtual ~CTextFormatCtrl();
 
 	// Generated message map functions
 protected:

@@ -5,7 +5,7 @@
 #define AFX_GUESS_NUMBERDLG_H__C309904B_C915_4E9C_88B2_A5EAD462DB39__INCLUDED_
 
 	// Added by ClassView
-#include "Start.h"
+#include "StartDlg.h"
 
 #if _MSC_VER > 1000
 #pragma once
@@ -16,7 +16,6 @@
 
 #include "windows.h"
 
-#include "BKListBox.h"
 #include "InfoDlg.h"                    /*这些头文件是必须包含的，一个Botton对应一个类一个头文件*/
 #include "SetDlg.h"	
 
@@ -27,7 +26,7 @@ public:
 	//CStart * m_InputDlg;
 	CSetDlg * m_Set;/*指向游戏设置对话框*/
 	CInfoDlg * m_Info;/*指向游戏介绍对话框*/
-	CStart * m_start;/*指向游戏开始对话框*/
+	CStartDlg * m_start;/*指向游戏开始对话框*/
 	CGuess_NumberDlg(CWnd* pParent = NULL);	// standard constructor
 
 // Dialog Data

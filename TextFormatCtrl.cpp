@@ -2,7 +2,7 @@
 //
 
 #include "stdafx.h"
-#include "MyEdit.h"
+#include "TextFormatCtrl.h"
 
 
 #ifdef _DEBUG
@@ -14,16 +14,16 @@ static char THIS_FILE[] = __FILE__;
 /////////////////////////////////////////////////////////////////////////////
 // CMyEdit
 
-CMyEdit::CMyEdit()
+CTextFormatCtrl::CTextFormatCtrl()
 {
 }
 
-CMyEdit::~CMyEdit()
+CTextFormatCtrl::~CTextFormatCtrl()
 {
 }
 
 
-BEGIN_MESSAGE_MAP(CMyEdit, CEdit)
+BEGIN_MESSAGE_MAP(CTextFormatCtrl, CEdit)
 	//{{AFX_MSG_MAP(CMyEdit)
 	ON_WM_CHAR()
 	//}}AFX_MSG_MAP
@@ -32,7 +32,7 @@ END_MESSAGE_MAP()
 /////////////////////////////////////////////////////////////////////////////
 // CMyEdit message handlers
 
-void CMyEdit::OnChar(UINT nChar, UINT nRepCnt, UINT nFlags) 
+void CTextFormatCtrl::OnChar(UINT nChar, UINT nRepCnt, UINT nFlags) 
 {
 
     if((nChar>='0')&&(nChar<='9'))

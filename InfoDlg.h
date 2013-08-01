@@ -36,7 +36,7 @@ protected:
 
 	// Generated message map functions
 	//{{AFX_MSG(CInfoDlg)
-	afx_msg void OnSelchangeTab1(NMHDR* pNMHDR, LRESULT* pResult);/*控制选项卡*/
+	afx_msg void OnTabChange(NMHDR* pNMHDR, LRESULT* pResult);/*控制选项卡*/
     virtual BOOL OnInitDialog();
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()

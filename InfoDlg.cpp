@@ -45,14 +45,14 @@ void CInfoDlg::DoDataExchange(CDataExchange* pDX)
 
 BEGIN_MESSAGE_MAP(CInfoDlg, CDialog)
 	//{{AFX_MSG_MAP(CInfoDlg)
-	ON_NOTIFY(TCN_SELCHANGE, IDC_TAB1, OnSelchangeTab1)
+	ON_NOTIFY(TCN_SELCHANGE, IDC_TAB1, OnTabChange)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 
 /////////////////////////////////////////////////////////////////////////////
 // CInfoDlg message handlers
 
-void CInfoDlg::OnSelchangeTab1(NMHDR* pNMHDR, LRESULT* pResult) 
+void CInfoDlg::OnTabChange(NMHDR* pNMHDR, LRESULT* pResult) 
 {
  int nTab=m_tab.GetCurSel();/*获取玩家对对话框的选择，数值化*/
  if(nTab==0)
